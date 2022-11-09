@@ -6,7 +6,7 @@
 int main() {
 	setlocale(LC_CTYPE, "ukr");
 
-	int n, x = 0, y = 0;
+	int n, x = 1, y = 0;
 	printf("Введiть кiлькiсть елементiв в масивi: ");
 	printf("\nn = ");
 	scanf("%d", &n);
@@ -21,8 +21,7 @@ int main() {
 
 	for (int i = 1; i < n; i++)
 	{
-		x += a[i];
-
+		x *= a[i];
 	}
 	printf("\nДобуток не нульових елементiв масиву: %d\n", x);
 

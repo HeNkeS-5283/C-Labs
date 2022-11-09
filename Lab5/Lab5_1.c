@@ -10,23 +10,23 @@ int main() {
 	printf("\nn = ");
 	scanf("%d", &n);
 
-	int a['n'];
+	float a['n'];
 	printf("\nВвести дiйснi числа для масиву:\n");
 	for (int i = 0; i < n; i++)
 	{
 		printf("a[%d] = ", i);
-		scanf("%d", &a[i]);
+		scanf("%f", &a[i]);
 	}
 
-	int b['n'];
-	for (int i = 0; i < n; i++)
+	float b['n'];
+	for (int i = 0; i < n; i++) {
 		b[i] = a[i];
+	}
 	printf("\nМасив упорядкований по зростанню:");
 	for (int i = 0; i < n; i++)
 	{
-		int min = b[i];
+		float min = b[i];
 		int	imin = i;
-
 		for (int j = i + 1; j < n; j++)
 			if (min > b[j])
 			{
@@ -37,5 +37,5 @@ int main() {
 		b[i] = min;
 	}
 	for (int i = 0; i < n; i++)
-		printf("\na[%d] = %d", i, b[i]);
+		printf("\nb[%d] = %.2f", i, b[i]);
 }
